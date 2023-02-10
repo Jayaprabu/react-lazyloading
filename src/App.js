@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css"
+import useCounter from './hooks/useCounter'
 
 function App() {
+
+  const hookCustom = useCounter()
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload By Jayaprabu Jayaraj.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div className="container mt-5">
+      <h2>Build Custom Hook in React</h2>
+      <div className="mt-2 mb-3">
+        Add counter: <strong>{hookCustom.addCount.counter}</strong>
+      </div>
+      <div className="d-grid">
+        <button           type="button"
+          className="btn btn-dark"
+          onClick={hookCustom.onCounterClick}
         >
-          Learn React
-        </a>
-      </header>
+          Add Counter
+        </button>
+      </div>
     </div>
-  );
+  )
 }
 
 export default App;
