@@ -6,8 +6,9 @@ export default function StateManagement() {
 
   const hookCustom = useCounter()
   return (
-    <div className="container mt-5">
-      <h2>Build Custom Hook in React</h2>
+    <React.Fragment>
+    
+      <h2>Build Custom Hook and State Management in React</h2>
       <div className="mt-2 mb-3">
         Add counter: <strong>{hookCustom.addCount.counter}</strong>
       </div>
@@ -16,7 +17,8 @@ export default function StateManagement() {
           Add Counter
         </button>
       </div>
-    </div>
+  
+    </React.Fragment>
   )
 }
 
