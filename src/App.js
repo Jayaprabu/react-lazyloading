@@ -11,6 +11,7 @@ const App = () => {
     <Header/>
     <Routes>
       <Route path="/state" element={<StateManagement/>}/>
+      <Route path="/lazy" element={"Lazy Loading"}/>
     </Routes>
  </BrowserRouter>
  )
